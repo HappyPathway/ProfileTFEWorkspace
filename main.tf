@@ -29,7 +29,7 @@ resource "null_resource" "profiler" {
   }
   
   provisioner "local-exec" {
-    command = "echo ${PWD}; ls -la"
+    command = "echo $${PWD}; ls -la"
   }
   
 }
