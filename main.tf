@@ -24,6 +24,14 @@ resource "null_resource" "profiler" {
     command = "sudo netstat -natp"
   }
   
+  provisioner "local-exec" {
+    command = "env"
+  }
+  
+  provisioner "local-exec" {
+    command = "echo ${PWD}; ls -la"
+  }
+  
 }
 
 
