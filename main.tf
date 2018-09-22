@@ -1,5 +1,9 @@
 resource "null_resource" "profiler" {
   provisioner "local-exec" {
+    command = "sudo apt-get update"
+  }
+  
+  provisioner "local-exec" {
     command = "sudo apt-get install -y facter"
   }
   
